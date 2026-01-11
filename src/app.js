@@ -14,5 +14,8 @@ app.use('/api/blagues', blagueRoutes);
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.get('/', (req, res) => {
+  res.send('API Carambar is running ');
+});
 
 module.exports = app;
