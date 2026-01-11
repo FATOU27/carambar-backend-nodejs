@@ -6,11 +6,11 @@ async function seedBlagues() {
   const count = await Blague.count();
 
   if (count > 0) {
-    console.log(' Blagues déjà chargées');
+    console.log('Blagues déjà chargées');
     return;
   }
 
-  const filePath = path.join(__dirname, '../data/blagues.json');
+  const filePath = path.join(__dirname, '../../blagues.json');
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
   await Blague.bulkCreate(data);

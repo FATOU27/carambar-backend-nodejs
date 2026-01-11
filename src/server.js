@@ -4,12 +4,10 @@ const seedBlagues = require('./config/seed');
 
 const PORT = process.env.PORT || 8080;
 
-
 sequelize.sync().then(async () => {
   await seedBlagues();
 
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
   });
 });
