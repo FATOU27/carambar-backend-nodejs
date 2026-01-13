@@ -9,8 +9,8 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: 'http://localhost:8080',
-      description: 'Serveur local'
+     url: 'https://carambar-backend-nodejs.onrender.com/',
+      description: 'Production server'
     }
   ]
 };
